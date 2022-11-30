@@ -9,7 +9,7 @@ export const RecipeList = ({ recipes }) => {
           <h3>{recipe.title}</h3>
           <p>{recipe.cookingTime} to make.</p>
           <div>{recipe.instructions.substring(0, 100)}...</div>
-          <Link to={`/recipes/${recipe.id}`}>Cook This</Link>
+          <Link to={`/recipes/${recipe.id}`}>Continue</Link>
         </div>
       ))}
     </div>
