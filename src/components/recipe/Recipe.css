@@ -1,0 +1,40 @@
+.page-title {
+  text-align: center;
+}
+
+.recipe {
+  max-width: 1200px;
+  margin: 40px;
+  text-align: left;
+  background: rgb(252, 251, 251);
+  padding: 40px;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.instructions {
+  text-align: left;
+  line-height: 1.5em;
+}
+.delete_btn {
+  color: #333;
+  text-decoration: none;
+  margin-left: 180px;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+}
+
+.edit_btn {
+  color: #333;
+  text-decoration: none;
+  margin-right: 180px;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-family: 'Quicksand', sans-serif;
+  float: right;
+  cursor: pointer;
+}

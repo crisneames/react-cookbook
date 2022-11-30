@@ -9,6 +9,7 @@
 .recipe-list .card {
   background: #fff;
   color: #333;
+  font-family: 'Quicksand', sans-serif;
   padding: 20px;
   border-radius: 4px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
@@ -16,9 +17,9 @@
   position: relative;
 }
 
-.recipe-list .card:hover {
+/* .recipe-list .card:hover {
   transform: rotate(3deg);
-}
+} */
 
 .recipe-list .card h3 {
   color: #555;
@@ -26,12 +27,12 @@
 }
 .recipe-list .card p {
   color: #999;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .recipe-list .card div {
   color: #555;
-  font-size: 0.7em;
+  font-size: 0.8em;
   margin: 20px 0px;
   line-height: 1.5em;
 }
