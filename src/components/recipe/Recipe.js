@@ -5,18 +5,26 @@ import './Recipe.css';
 
 export const Recipe = () => {
   const { id } = useParams();
-  //const url = 'http://localhost:8088/recipes/:id';
+  // const url = 'http://localhost:8088/recipes/:id';
   const url = 'http://localhost:8088/recipes/' + id;
   const { error, isPending, data } = useFetch(url);
 
+  // Delete Recipe
   const navigate = useNavigate();
-  const handleClick = () => {
+  const handleDelete = () => {
     fetch(url, {
       method: 'DELETE',
     }).then(() => {
       navigate('/');
     });
   };
+
+  //   fetch(url, {
+  //     method: 'PUT',
+  //   }).then(() => {
+  //     navigate('/');
+  //   });
+  // };
 
   return (
     <div className="recipe">
@@ -35,10 +43,15 @@ export const Recipe = () => {
           <p className="instructions">
             <b>Instructions:</b> {data.instructions}
           </p>
-          <button className="delete_btn" onClick={handleClick}>
+          <button className="delete_btn" onClick={handleDelete}>
             Delete
           </button>
-          <button className="edit_btn">Edit</button>
+          <button
+            className="edit_btn"
+            onClick={() => navigate(`/edit/${data.id}`)}
+          >
+            Edit
+          </button>
         </>
       )}
     </div>

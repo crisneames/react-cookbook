@@ -1,22 +1,20 @@
-import { Outlet, Route, Routes } from 'react-router-dom';
-import { Recipes } from '../recipes/Recipes';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import { Home } from './components/home/Home';
+import { Create } from './components/create/Create';
+import { Search } from './components/search/Search';
+import { Recipe } from './components/recipe/Recipe';
+import { RecipeEdit } from './components/recipe/RecipeEdit';
+
 
 export const ApplicationViews = () => {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <h1>Honey Rae Repair Shop</h1>
-            <div>Your one-stop-shop to get all your electronics fixed</div>
+    <h1>Application Views</h1>
+    
+     
+        
+          
+    
 
-            <Outlet />
-          </>
-        }
-      >
-        <Route path="recipes" element={<Recipes />} />
-      </Route>
-    </Routes>
-  );
 };

@@ -6,7 +6,7 @@
 
 .navbar nav {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   max-width: 1200px;
   margin: 30px;
 }
@@ -24,7 +24,8 @@
 .navbar a:last-child {
   color: #333;
   text-decoration: none;
-  margin-left: 40px;
+  margin-left: 140px;
+  margin-right: 0;
   padding: 8px;
   border: 1px solid #333;
   border-radius: 4px;
