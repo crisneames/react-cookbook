@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
 import './NavBar.css';
 
 export const NavBar = () => {
@@ -13,6 +14,7 @@ export const NavBar = () => {
           />
           <h1 className="left">Cookbook</h1>
         </Link>
+        <SearchBar />
         <Link to="/create">Create Recipe</Link>
       </nav>
     </div>
