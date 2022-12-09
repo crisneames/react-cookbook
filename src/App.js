@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/create" element={<Create />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/search/:searchWord" element={<Search />} />
         <Route path="/edit/:id" element={<RecipeEdit />} />
         <Route path="/recipes/:id" element={<Recipe />} />
       </Routes>
