@@ -9,8 +9,12 @@ export const SearchBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setKeyword(e.target.value);
+
     //navigate('/search');
-    navigate(`/search?q=${keyword}`);
+    if (e.key === 'Enter') {
+      navigate(`search/${keyword}`);
+    }
     //console.log(keyword);
   };
   return (
@@ -20,7 +24,7 @@ export const SearchBar = () => {
       <input
         type="text"
         id="search"
-        onChange={(e) => setKeyword(e.target.value)}
+        onKeyUp={(e) => handleSubmit(e)}
         required
       />
     </div>
