@@ -1,11 +1,28 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
-import { Home } from './components/home/Home';
-import { Create } from './components/create/Create';
-import { Search } from './components/search/Search';
-import { Recipe } from './components/recipe/Recipe';
-import { RecipeEdit } from './components/recipe/RecipeEdit';
+import { Home } from '../home/Home';
+import { Create } from '../create/Create';
+import { Search } from '../search/Search';
+import { Recipe } from '../recipe/Recipe';
+import { RecipeEdit } from '../recipe/RecipeEdit';
 
 export const ApplicationViews = () => {
-  return <h1>Application Views</h1>;
+  return (
+    <Routes>
+      <Route
+        exact
+        path="/"
+        element={
+          <>
+            <Home />
+          </>
+        }
+      ></Route>
+
+      <Route path="/create" element={<Create />} />
+      <Route path="/search/:searchWord" element={<Search />} />
+      <Route path="/edit/:id" element={<RecipeEdit />} />
+      <Route path="/recipes/:id" element={<Recipe />} />
+    </Routes>
+  );
 };

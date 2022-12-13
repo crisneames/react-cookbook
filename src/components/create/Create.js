@@ -8,10 +8,14 @@ export const Create = () => {
   const [instructions, setInstructions] = useState('');
   const [cookingTime, setCookingTime] = useState('');
   const [userRecipeType, setUserRecipeType] = useState('');
+  //const [userId, setUserId] = useState('');
 
   const navigate = useNavigate();
 
   const [recipeType, setRecipeType] = useState([]);
+
+  const localUser = localStorage.getItem('capstone_user');
+  const userObject = JSON.parse(localUser);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,16 +26,9 @@ export const Create = () => {
     fetchData();
   }, []);
 
-  // const options = [
-  //   { value: '', text: '--Choose an option--' },
-  //   { value: 'beef', text: 'Beef' },
-  //   { value: 'chicken', text: 'Chicken' },
-  //   { value: 'pork', text: 'Pork' },
-  //   { value: 'seafood', text: 'Seafood' },
-  //   { value: 'vegetarian', text: 'Vegetarian' },
-  // ];
-
-  // const [foodType, setFoodType] = useState(options[0].value);
+  // useEffect(() => {
+  //   setUserId(userObject);
+  // }, [userObject]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,6 +39,7 @@ export const Create = () => {
       instructions,
       cookingTime,
       userRecipeType,
+      userId: userObject.id,
     };
 
     fetch('http://localhost:8088/recipes', {
@@ -59,7 +57,6 @@ export const Create = () => {
 
   return (
     <>
-      {/* {recipeType.length > 0 ? ( */}
       <div className="create">
         <h2 className="page-title">Add a New Recipe</h2>
 

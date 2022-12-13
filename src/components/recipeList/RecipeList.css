@@ -13,7 +13,6 @@
   padding: 20px;
   border-radius: 4px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
   position: relative;
 }
 
@@ -43,5 +42,5 @@
   width: 120px;
   padding: 8px;
   border-radius: 4px;
-  margin: 220px auto 0;
+  margin: 20px auto 0;
 }
