@@ -4,8 +4,11 @@ import { useFetch } from '../../hooks/useFetch';
 import './Recipe.css';
 
 export const Recipe = () => {
+  const localUser = localStorage.getItem('capstone_user');
+  const userObject = JSON.parse(localUser);
+
   const { id } = useParams();
-  // const url = 'http://localhost:8088/recipes/:id';
+
   const url = 'http://localhost:8088/recipes/' + id;
   const { error, isPending, data } = useFetch(url);
 
@@ -18,13 +21,6 @@ export const Recipe = () => {
       navigate('/');
     });
   };
-
-  //   fetch(url, {
-  //     method: 'PUT',
-  //   }).then(() => {
-  //     navigate('/');
-  //   });
-  // };
 
   return (
     <div className="recipe">
@@ -43,15 +39,24 @@ export const Recipe = () => {
           <p className="instructions">
             <b>Instructions:</b> {data.instructions}
           </p>
-          <button className="delete_btn" onClick={handleDelete}>
-            Delete
-          </button>
-          <button
-            className="edit_btn"
-            onClick={() => navigate(`/edit/${data.id}`)}
-          >
-            Edit
-          </button>
+          {userObject.id === data.userId ? (
+            <button className="delete_btn" onClick={handleDelete}>
+              Delete
+            </button>
+          ) : (
+            <> </>
+          )}
+
+          {userObject.id === data.userId ? (
+            <button
+              className="edit_btn"
+              onClick={() => navigate(`/edit/${data.id}`)}
+            >
+              Edit
+            </button>
+          ) : (
+            <></>
+          )}
         </>
       )}
     </div>

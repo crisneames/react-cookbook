@@ -1,26 +1,30 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { NavBar } from './components/nav/NavBar';
 
-import { Home } from './components/home/Home';
-import { Create } from './components/create/Create';
-import { Search } from './components/search/Search';
-import { Recipe } from './components/recipe/Recipe';
-import { RecipeEdit } from './components/recipe/RecipeEdit';
+import { Login } from './components/auth/Login';
+import { Register } from './components/auth/Register';
+import { ApplicationViews } from './components/views/ApplicationViews';
+import { Authorized } from './components/views/Authorized';
 
 function App() {
-  // return <div className="App">cookbook</div>;
-
   return (
-    <BrowserRouter>
-      <NavBar />
+    <>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/search/:searchWord" element={<Search />} />
-        <Route path="/edit/:id" element={<RecipeEdit />} />
-        <Route path="/recipes/:id" element={<Recipe />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route
+          path="*"
+          element={
+            <Authorized>
+              <>
+                <NavBar />
+                <ApplicationViews />
+              </>
+            </Authorized>
+          }
+        />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 export default App;

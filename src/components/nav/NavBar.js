@@ -14,6 +14,13 @@ export const NavBar = () => {
           />
           <h1 className="left">Cookbook</h1>
         </Link>
+        <Link className="login" to="/login">
+          Login
+        </Link>
+
+        <Link className="logout" to="/logout">
+          Logout
+        </Link>
         <SearchBar />
         <Link to="/create">Create Recipe</Link>
       </nav>
