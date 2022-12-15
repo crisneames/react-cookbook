@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
+import { Comments } from '../comments/Comments';
 import './Recipe.css';
 
 export const Recipe = () => {
@@ -57,6 +58,7 @@ export const Recipe = () => {
           ) : (
             <></>
           )}
+          <Comments recipeId={id} />
         </>
       )}
     </div>
