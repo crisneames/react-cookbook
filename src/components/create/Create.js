@@ -26,10 +26,6 @@ export const Create = () => {
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   setUserId(userObject);
-  // }, [userObject]);
-
   const handleSubmit = (e) => {
     e.preventDefault();
 

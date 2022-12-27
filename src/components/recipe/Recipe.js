@@ -1,12 +1,16 @@
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useFetch } from '../../hooks/useFetch';
 import { Comments } from '../comments/Comments';
+import { FaStar } from 'react-icons/fa';
 import './Recipe.css';
 
 export const Recipe = () => {
   const localUser = localStorage.getItem('capstone_user');
   const userObject = JSON.parse(localUser);
+
+  const [ratings, setRatings] = useState(0);
 
   const { id } = useParams();
 
@@ -23,6 +27,22 @@ export const Recipe = () => {
     });
   };
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(
+        `http://localhost:8088/ratings?recipeId=${id}`
+      );
+      const ratingsArray = await response.json();
+      let totalRatings = 0;
+      ratingsArray.forEach((rating) => {
+        totalRatings += rating.rating;
+      });
+      const avgRatings = totalRatings / ratingsArray.length;
+      setRatings(avgRatings);
+    };
+    fetchData();
+  }, []);
+
   return (
     <div className="recipe">
       {error && <p className="error">{error}</p>}
@@ -30,6 +50,22 @@ export const Recipe = () => {
       {data && (
         <>
           <h2 className="page-title">{data.title}</h2>
+          {[...Array(5)].map((star, i) => {
+            const ratingValue = i + 1;
+
+            return (
+              <label>
+                <FaStar
+                  className="star"
+                  color={
+                    ratingValue <= Math.round(ratings) ? '#ffc107' : '#e4e5e9'
+                  }
+                  size={25}
+                />
+              </label>
+            );
+          })}
+
           <p>
             <b>Cooking Time: </b>
             {data.cookingTime}
@@ -47,7 +83,6 @@ export const Recipe = () => {
           ) : (
             <> </>
           )}
-
           {userObject.id === data.userId ? (
             <button
               className="edit_btn"
