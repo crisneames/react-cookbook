@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+//import { useParams } from 'react-router-dom';
 import { FaStar } from 'react-icons/fa';
 import './Comments.css';
 
@@ -10,16 +10,14 @@ export const Comments = ({ recipeId }) => {
   const [hover, setHover] = useState(null);
   const [comments, setComments] = useState([]);
 
-  const [comment, setComment] = useState([]);
+  //const [comment, setComment] = useState([]);
   const [newComment, setNewComment] = useState({
     comment: '',
     recipeId: recipeId,
     userId: userObject.id,
   });
 
-  const { id } = useParams();
-
-  //const navigate = useNavigate();
+  //const { id } = useParams();
 
   const fetchComments = async () => {
     const response = await fetch(
@@ -57,7 +55,25 @@ export const Comments = ({ recipeId }) => {
     });
   };
 
-  console.log(id);
+  const handleRatings = async (e, ratingValue) => {
+    e.preventDefault();
+
+    setRating(ratingValue);
+
+    const rating = {
+      recipeId: recipeId,
+      userId: userObject.id,
+      rating: ratingValue,
+    };
+
+    fetch('http://localhost:8088/ratings', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(rating),
+    }).then(() => {
+      window.location.reload(false);
+    });
+  };
 
   return (
     <>
@@ -71,7 +87,7 @@ export const Comments = ({ recipeId }) => {
                 type="radio"
                 name="rating"
                 value={ratingValue}
-                onClick={() => setRating(ratingValue)}
+                onClick={(e) => handleRatings(e, ratingValue)}
               />
               <FaStar
                 className="star"
@@ -97,6 +113,7 @@ export const Comments = ({ recipeId }) => {
         </form>
 
         <article className="comments">
+          <h3>Comments</h3>
           {comments.map((comment) => {
             return (
               <section className="comment" key={`comment--${comment.id}`}>
