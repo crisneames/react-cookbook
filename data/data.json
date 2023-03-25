@@ -1,0 +1,427 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Dion Stoade",
+      "email": "dstoade0@cornell.edu"
+    },
+    {
+      "id": 2,
+      "fullName": "Windy Thorneloe",
+      "email": "wthorneloe1@usa.gov"
+    },
+    {
+      "id": 3,
+      "fullName": "Hillie Phillpotts",
+      "email": "hphillpotts2@rakuten.co.jp"
+    },
+    {
+      "id": 4,
+      "fullName": "Helenelizabeth Passfield",
+      "email": "hpassfield7@netvibes.com"
+    },
+    {
+      "email": "cristi@test.com",
+      "fullName": "Cristi Neames",
+      "id": 5
+    }
+  ],
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Pepperoni Pizza",
+      "ingredients": "crust, tomato sauce, pepperonies, cheese",
+      "instructions": "Add tomato sauce to crust. Add cheese and top with pepperonies. Can also add any vegetable or other meat to enhighten flavors. Seasoning with garlic is optional.",
+      "cookingTime": "1 hour",
+      "recipeTypeId": 2,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "Yummy Sweet Potato Casserole",
+      "ingredients": "sweet potatos, sugar, eggs, salt, butter, milk, vanilla extract",
+      "instructions": "Cook, peel and mash sweet potatoes. Add other ingredients and mix. Add pecans to the top if desired.",
+      "cookingTime": "1 hr 45 minutes",
+      "recipeTypeId": 5,
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "title": "Chicken Spaghetti",
+      "ingredients": "spaghetti noodles cooked, cooked chicken, cheese, rotel, seasonings",
+      "instructions": "add noodles, chicken, cheese, rotel, seasonings and heat on low until melted and warm.",
+      "cookingTime": "45 minutes",
+      "recipeTypeId": 1,
+      "userId": 2
+    },
+    {
+      "title": "Garlic Shrimp Pasta Bake",
+      "ingredients": "penne pasta, shrimp, flour, chicken broth",
+      "instructions": "cook pasta according to directions. mix chicken broth and flour. Add pasta and shrimp to broth mixture. Season to taste.",
+      "cookingTime": "30 minutes",
+      "recipeTypeId": 4,
+      "id": 4,
+      "userId": 2
+    },
+    {
+      "title": "asdfavwfvasdfv ",
+      "ingredients": "wv asffva dfav dfva d",
+      "instructions": "av dfva dfadfv ",
+      "cookingTime": "1 hr",
+      "userRecipeType": 6,
+      "id": 5,
+      "userId": 3
+    },
+    {
+      "title": "Pecan Pie",
+      "ingredients": "asdfasdfasdf",
+      "instructions": "asdfasdfasdf",
+      "cookingTime": "1 hr",
+      "userRecipeType": 6,
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "title": "Chocolate Pie",
+      "ingredients": "asdfasdfasdfasd",
+      "instructions": "asdfasdfasdf",
+      "cookingTime": "asdfasdf",
+      "userRecipeType": 6,
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "title": "adfa dfasdf ",
+      "ingredients": "a dfasd fad f",
+      "instructions": "adf asd fasdf ad",
+      "cookingTime": "2 hr",
+      "userRecipeType": 1,
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "title": "asdf sdf asdf asdf ",
+      "ingredients": "ad fa fawf adf adfadf asd",
+      "instructions": "asdf asdfasdf ",
+      "cookingTime": "2 hr 15 min",
+      "userRecipeType": 6,
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "title": "Pecan ;pie",
+      "ingredients": "asdfasdfadfasdf",
+      "instructions": "asdfasdfasdf",
+      "cookingTime": "1 hour 30 min",
+      "userRecipeType": 6,
+      "userId": 1,
+      "id": 12
+    }
+  ],
+  "recipeType": [
+    {
+      "id": 1,
+      "name": "chicken"
+    },
+    {
+      "id": 2,
+      "name": "beef"
+    },
+    {
+      "id": 3,
+      "name": "pork"
+    },
+    {
+      "id": 4,
+      "name": "seafood"
+    },
+    {
+      "id": 5,
+      "name": "vegetarian"
+    },
+    {
+      "id": 6,
+      "name": "Dessert"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "comment": "I added more seasoning",
+      "recipeId": 3,
+      "userId": 2
+    },
+    {
+      "comment": "",
+      "recipeId": "1",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "comment": "the best recipe",
+      "recipeId": "2",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "comment": "loved this pizza",
+      "recipeId": "1",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "comment": "great pizza",
+      "recipeId": "1",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "comment": "great pizza",
+      "recipeId": "1",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "comment": "great pizza",
+      "recipeId": "1",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "comment": "great pizza",
+      "recipeId": "1",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "comment": "i love pizza",
+      "recipeId": "1",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "comment": "i love pizza",
+      "recipeId": "1",
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "comment": "I love pizza",
+      "recipeId": "1",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "comment": "i love pizza",
+      "recipeId": "1",
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "comment": "pizza!\n",
+      "recipeId": "1",
+      "userId": 1,
+      "id": 13
+    },
+    {
+      "comment": "yum yum",
+      "recipeId": "2",
+      "userId": 1,
+      "id": 16
+    },
+    {
+      "comment": "yum! yum!",
+      "recipeId": "3",
+      "userId": 1,
+      "id": 17
+    },
+    {
+      "comment": "this is great!",
+      "recipeId": "1",
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "comment": "yum! yum!",
+      "recipeId": "8",
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "comment": "sfasdfasdfsadf",
+      "recipeId": "11",
+      "userId": 1,
+      "id": 20
+    },
+    {
+      "comment": "yum yuim!\n",
+      "recipeId": "4",
+      "userId": 1,
+      "id": 21
+    }
+  ],
+  "ratings": [
+    {
+      "id": 1,
+      "recipeId": 1,
+      "userId": 1,
+      "rating": 5
+    },
+    {
+      "recipeId": "2",
+      "userId": 1,
+      "rating": 5,
+      "id": 2
+    },
+    {
+      "recipeId": "2",
+      "userId": 1,
+      "rating": 4,
+      "id": 3
+    },
+    {
+      "recipeId": "2",
+      "userId": 1,
+      "rating": 5,
+      "id": 4
+    },
+    {
+      "recipeId": "2",
+      "userId": 1,
+      "rating": 2,
+      "id": 5
+    },
+    {
+      "recipeId": "2",
+      "userId": 1,
+      "rating": 3,
+      "id": 6
+    },
+    {
+      "recipeId": "2",
+      "userId": 1,
+      "rating": 3,
+      "id": 7
+    },
+    {
+      "recipeId": "2",
+      "userId": 1,
+      "rating": 1,
+      "id": 8
+    },
+    {
+      "recipeId": "3",
+      "userId": 1,
+      "rating": 5,
+      "id": 9
+    },
+    {
+      "recipeId": "1",
+      "userId": 1,
+      "rating": 3,
+      "id": 10
+    },
+    {
+      "recipeId": "1",
+      "userId": 1,
+      "rating": 3,
+      "id": 11
+    },
+    {
+      "recipeId": "1",
+      "userId": 1,
+      "rating": 2,
+      "id": 12
+    },
+    {
+      "recipeId": "1",
+      "userId": 1,
+      "rating": 1,
+      "id": 13
+    },
+    {
+      "recipeId": "1",
+      "userId": 1,
+      "rating": 2,
+      "id": 14
+    },
+    {
+      "recipeId": "1",
+      "userId": 1,
+      "rating": 3,
+      "id": 15
+    },
+    {
+      "recipeId": "1",
+      "userId": 1,
+      "rating": 4,
+      "id": 16
+    },
+    {
+      "recipeId": "1",
+      "userId": 1,
+      "rating": 5,
+      "id": 17
+    },
+    {
+      "recipeId": "1",
+      "userId": 1,
+      "rating": 5,
+      "id": 18
+    },
+    {
+      "recipeId": "1",
+      "userId": 1,
+      "rating": 5,
+      "id": 19
+    },
+    {
+      "recipeId": "1",
+      "userId": 1,
+      "rating": 5,
+      "id": 20
+    },
+    {
+      "recipeId": "8",
+      "userId": 1,
+      "rating": 5,
+      "id": 21
+    },
+    {
+      "recipeId": "8",
+      "userId": 1,
+      "rating": 3,
+      "id": 22
+    },
+    {
+      "recipeId": "8",
+      "userId": 1,
+      "rating": 1,
+      "id": 23
+    },
+    {
+      "recipeId": "11",
+      "userId": 1,
+      "rating": 2,
+      "id": 24
+    },
+    {
+      "recipeId": "11",
+      "userId": 1,
+      "rating": 5,
+      "id": 25
+    },
+    {
+      "recipeId": "4",
+      "userId": 1,
+      "rating": 2,
+      "id": 26
+    },
+    {
+      "recipeId": "4",
+      "userId": 1,
+      "rating": 3,
+      "id": 27
+    }
+  ]
+}
